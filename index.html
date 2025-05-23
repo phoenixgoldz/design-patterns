@@ -3,99 +3,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Design Patterns Demo – Trevor Hicks</title>
+  <title>Trevor Hicks – CSC360 Final Project</title>
   <style>
     body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
       padding: 2rem;
+      line-height: 1.6;
     }
     h1, h2 {
-      color: #0ff;
+      color: #00ffff;
+    }
+    h3 {
+      color: #ffcc00;
     }
     pre {
-      background-color: #222;
+      background-color: #1e1e1e;
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 5px;
       overflow-x: auto;
-      margin-bottom: 2rem;
     }
     code {
-      color: #0f0;
+      color: #7fffd4;
+    }
+    a {
+      color: #00bfff;
     }
   </style>
 </head>
 <body>
-  <h1>CSC360 Final Project – Design Patterns in C#</h1>
-  <p><strong>Trevor Hicks</strong></p>
+  <h1>Trevor Hicks – CSC360 Final Project</h1>
+  <h2>Design Patterns Implemented</h2>
 
-  <h2>Creational Pattern – Factory Method</h2>
-  <p>This pattern is used to create objects without specifying the exact class. Here's a TypeScript configuration example that centralizes setup using a factory-like approach.</p>
-  <pre><code>import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-
-export default defineConfig({
-  plugins: [
-    react(),
-    runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-        ]
-      : []),
-  ],
-  resolve: {
-    alias: {
-// ... truncated for brevity</code></pre>
-
-  <h2>Structural Pattern – Decorator</h2>
-  <p>Decorator pattern adds behavior to objects dynamically. Below is a Tailwind config that decorates the default theme with extended styles, simulating structural augmentation.</p>
-  <pre><code>import type { Config } from "tailwindcss";
-
-export default {
-  darkMode: ["class"],
-  content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        popover: {
-// ... truncated for brevity</code></pre>
-
-  <h2>Behavioral Pattern – Command</h2>
-  <p>The Command pattern encapsulates requests as objects. Here's a config file that sets up DB operations in a modular, command-like structure.</p>
-  <pre><code>import { defineConfig } from "drizzle-kit";
-
-if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL, ensure the database is provisioned");
+  <h3>Creational Pattern – Factory Method</h3>
+  <p>The Factory Method pattern allows the creation of objects without specifying their exact class. It relies on inheritance and lets subclasses alter the type of objects that will be created.</p>
+  <pre><code>// Factory Method Example in C#
+public interface IEnemy {
+    void Attack();
 }
 
-export default defineConfig({
-  out: "./migrations",
-  schema: "./shared/schema.ts",
-  dialect: "postgresql",
-  dbCredentials: {
-    url: process.env.DATABASE_URL,
-  },
-});
-// ... truncated for brevity</code></pre>
+public class Goblin : IEnemy {
+    public void Attack() => Console.WriteLine("Goblin attacks!");
+}
 
-  <p>💡 To explore the complete source code, visit the <a href="https://github.com/YOUR_USERNAME/design-patterns-final" style="color:#0ff;">GitHub repository</a>.</p>
+public class Orc : IEnemy {
+    public void Attack() => Console.WriteLine("Orc smashes!");
+}
+
+public abstract class EnemyFactory {
+    public abstract IEnemy CreateEnemy();
+}
+
+public class GoblinFactory : EnemyFactory {
+    public override IEnemy CreateEnemy() => new Goblin();
+}
+</code></pre>
+
+  <h3>Structural Pattern – Decorator</h3>
+  <p>The Decorator pattern lets you add responsibilities to objects dynamically. It's a flexible alternative to subclassing for extending functionality.</p>
+  <pre><code>// Decorator Pattern Example in C#
+public interface ICharacter {
+    void Display();
+}
+
+public class BaseCharacter : ICharacter {
+    public void Display() => Console.WriteLine("Basic character");
+}
+
+public abstract class CharacterDecorator : ICharacter {
+    protected ICharacter _character;
+    public CharacterDecorator(ICharacter character) {
+        _character = character;
+    }
+    public abstract void Display();
+}
+
+public class ShieldDecorator : CharacterDecorator {
+    public ShieldDecorator(ICharacter character) : base(character) {}
+    public override void Display() {
+        _character.Display();
+        Console.WriteLine("...with a shield!");
+    }
+}
+</code></pre>
+
+  <h3>Behavioral Pattern – Command</h3>
+  <p>The Command pattern encapsulates a request as an object, allowing you to parameterize methods and queue or log operations.</p>
+  <pre><code>// Command Pattern Example in C#
+public interface ICommand {
+    void Execute();
+}
+
+public class MoveCommand : ICommand {
+    public void Execute() => Console.WriteLine("Moving...");
+}
+
+public class AttackCommand : ICommand {
+    public void Execute() => Console.WriteLine("Attacking!");
+}
+
+public class Player {
+    public void PerformAction(ICommand command) {
+        command.Execute();
+    }
+}
+</code></pre>
+
+  <p>💡 <a href="https://github.com/phoenixgoldz/design-patterns" target="_blank">View the complete source code on GitHub</a></p>
 </body>
 </html>
