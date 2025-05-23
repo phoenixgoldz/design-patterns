@@ -1,0 +1,357 @@
+
+Skip To Content
+Dashboard
+Trevor Hicks
+Account
+Dashboard
+Courses
+Calendar
+Inbox
+History
+10 unread release notes.10
+Help
+CSC360-SBAssignmentsFinal Assignment Review Three Design Patterns
+2025 Q2 Spring
+Home
+Syllabus
+Announcements
+Modules
+Assignments
+Zoom
+Grades3
+People
+Discussions
+Files
+Quizzes
+Final Assignment Review Three Design Patterns
+Due Jun 5 by 11:59pm Points 60 Submitting a website url
+Final Project Instructions: Design Patterns in C# (Demo Focused)
+Objective: Develop a simple C# application that demonstrates three different design patterns—one from each category (Creational, Structural, and Behavioral). The project should clearly showcase correct implementations of the chosen patterns and include their essential components.
+
+Project Requirements:
+Pattern Selection:
+
+Choose one design pattern from each category:
+
+Creational (e.g., Singleton, Factory Method, Abstract Factory)
+
+Structural (e.g., Adapter, Composite, Decorator)
+
+Behavioral (e.g., Observer, Strategy, Command)
+
+Implementation:
+
+Ensure each pattern follows its essential elements.
+
+Provide clear and concise comments in the code to support explanations.
+
+Each pattern should have a simple, functional example that can be demonstrated in real time.
+
+Live Demo Structure (5 Minutes) Students will present their understanding through a brief demonstration:
+
+Introduction
+
+Introduce the three selected design patterns.
+
+Explain how each fits into its category and why it was chosen.
+
+Code Walkthrough
+
+Show key components of each pattern in the application.
+
+Demonstrate how the pattern works and why it’s structured this way.
+
+Highlight how it improves flexibility, maintainability, or scalability.
+
+Engagement & Clarity:
+
+Keep the explanation concise and well-structured to fit the time limit.
+
+Use simple real-world analogies where applicable to help convey the concepts.
+
+Ensure code is readable, properly formatted, and tested before the demo.
+
+It is your responsibility to demonstrate to the professor that you understand and implemented the design patterns correctly.
+To get credit your design pattern must implement all the essential elements below.
+
+Creational Design Patterns
+
+Singleton
+
+Singleton Class: The class that ensures only one instance exists
+
+Private Constructor: Prevents external instantiation
+
+Static Instance: Stores the single instance of the class
+
+Public Static Method: Provides global access to the instance
+
+Factory Method
+
+Creator (Abstract Class or Interface): Defines the factory method
+
+Concrete Creator: Implements the factory method and returns an instance of the product
+
+Product (Abstract Class or Interface): Defines the object type
+
+Concrete Product: Implements the product interface
+
+Abstract Factory
+
+Abstract Factory (Interface or Abstract Class): Defines creation methods for related objects
+
+Concrete Factory: Implements the abstract factory and creates specific products
+
+Product (Abstract Class or Interface): Defines product types
+
+Concrete Product: Implements the product interface
+
+Builder
+
+Builder (Interface or Abstract Class): Specifies methods to create object parts
+
+Concrete Builder: Implements the builder methods
+
+Director: Defines the steps for constructing an object
+
+Product: The complex object being built
+
+Prototype
+
+Prototype Interface: Defines a cloning method
+
+Concrete Prototype: Implements the cloning method
+
+Client
+
+Behavioral Design Patterns
+
+Chain of Responsibility
+
+Handler (Interface or Abstract Class): Defines how requests are processed
+
+Concrete Handler: Implements request-handling logic
+
+Client: Sends requests to the first handler
+
+Command
+
+Command (Interface or Abstract Class): Defines an action
+
+Concrete Command: Implements the action
+
+Receiver: Performs the actual work
+
+Invoker: Executes the command
+
+Client: Creates and configures commands
+
+Interpreter
+
+Abstract Expression: Defines the interface for interpretation
+
+Terminal Expression: Represents a constant value or variable
+
+Non-Terminal Expression: Represents operations on expressions
+
+Context: Holds the data required for interpretation
+
+Iterator
+
+Iterator Interface: Defines methods for traversal
+
+Concrete Iterator: Implements traversal logic
+
+Aggregate Interface: Defines collection behavior
+
+Concrete Aggregate: Stores and provides access to elements
+
+Mediator
+
+Mediator Interface: Defines communication between objects
+
+Concrete Mediator: Implements interaction logic
+
+Colleague Interface: Represents objects that interact through the mediator
+
+Concrete Colleague: Implements the behavior of objects
+
+Memento
+
+Originator: Creates and restores states
+
+Memento: Stores state information
+
+Caretaker: Manages memento objects
+
+Observer
+
+Subject: Maintains a list of observers
+
+Observer Interface: Defines update methods
+
+Concrete Observer: Implements behavior when notified
+
+State
+
+State Interface: Defines possible behaviors
+
+Concrete State: Implements specific behaviors
+
+Context: Maintains the current state
+
+Strategy
+
+Strategy Interface: Defines different algorithms
+
+Concrete Strategy: Implements specific algorithms
+
+Context: Stores and applies strategies
+
+Template Method
+
+Abstract Class: Defines a template method with steps
+
+Concrete Class: Implements the steps
+
+Visitor
+
+Visitor Interface: Defines operations on elements
+
+Concrete Visitor: Implements specific operations
+
+Element Interface: Accepts visitors
+
+Concrete Element
+
+Structural Design Patterns
+
+Adapter
+
+Target Interface: Defines the expected interface
+
+Adapter: Bridges the gap between incompatible interfaces
+
+Adaptee: The existing class with a different interface
+
+Client: Uses the adapter
+
+Bridge
+
+Abstraction: Defines high-level behavior
+
+Refined Abstraction: Extends abstraction behavior
+
+Implementation Interface: Defines low-level behavior
+
+Concrete Implementation: Implements low-level behavior
+
+Composite
+
+Component Interface: Defines behavior for objects in a tree structure
+
+Leaf: Represents individual objects
+
+Composite: Contains child components
+
+Client: Uses the composite structure
+
+Decorator
+
+Component Interface: Defines standard behavior
+
+Concrete Component: Implements the core behavior
+
+Decorator Interface: Extends behavior dynamically
+
+Concrete Decorator: Adds additional functionality
+
+Facade
+
+Facade: Simplifies a complex subsystem
+
+Subsystem Classes: Perform actual operations
+
+Client: Uses the facade for easy access
+
+Flyweight
+
+Flyweight Interface: Defines shared behavior
+
+Concrete Flyweight: Implements reusable behavior
+
+Flyweight Factory: Manages and reuses flyweight objects
+
+Client: Uses shared flyweight objects
+
+Proxy
+
+Subject Interface: Defines expected behavior
+
+Real Subject: Implements actual functionality
+
+Proxy: Controls access to the real subject
+
+Client
+
+Website URL
+Website URL*
+https://
+Comments...
+ 
+Rubric
+CSC 360 Final Project
+CSC 360 Final Project
+Criteria	Ratings	Pts
+This criterion is linked to a Learning OutcomeCreational Design Pattern
+20 pts
+Full Marks
+Creational design pattern selected, Properly implemented with expected elements. Is Demonstrable.
+15 pts
+Missing Elements
+Any elements of the design pattern are missing.
+10 pts
+Inaccurate Implementation
+There is an attempt to implement the design pattern but core elements are missing.
+5 pts
+Not working
+An attempt is maid but the functionality is not working. Missing key elements.
+0 pts
+No Marks
+No Creational design pattern chosen.
+20 pts
+This criterion is linked to a Learning OutcomeBehavioral Design Pattern
+20 pts
+Full Marks
+Behavioral design pattern selected, properly implemented with expected elements. Is Demonstrable.
+15 pts
+Missing Elements
+Any elements of the design pattern are missing.
+10 pts
+Inaccurate Implementation
+There is an attempt to implement the design pattern but core elements are missing.
+5 pts
+Not working
+An attempt is maid but the functionality is not working. Missing key elements.
+0 pts
+No Marks
+No Behavioral design pattern chosen.
+20 pts
+This criterion is linked to a Learning OutcomeStructural Design Pattern
+20 pts
+Full Marks
+Structural design pattern selected, properly implemented with expected elements. Is Demonstrable.
+15 pts
+Missing Elements
+Any elements of the design pattern are missing.
+10 pts
+Inaccurate Implementation
+There is an attempt to implement the design pattern but core elements are missing.
+5 pts
+Not working
+An attempt is maid but the functionality is not working. Missing key elements.
+0 pts
+No Marks
+No Structural design pattern chosen.
+20 pts
+Total Points: 60
